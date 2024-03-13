@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Exam</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        ol ol {
+            list-style-type: lower-alpha;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'testapp/base.html' %}
+    {% block body_block %}
+    <div class="container">
+        <h2>Aptitude Exam</h2>
+        <p>Welcome to the Aptitude exam. Please read the instructions carefully before starting the exam.</p>
+        <p>Duration: 90 minutes</p>
+        <p>Total Questions: 20</p>
+        <p>Passing Score: 70%</p>
+        <form action="submit_exam.html" method="post">
+            <ol>
+                <li>
+                    <h4>What is 15% of 300?</h4>
+                    <ol type="a">
+                        <li>45</li>
+                        <li>50</li>
+                        <li>55</li>
+                        <li>60</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the next number in the sequence: 2, 6, 12, 20, ...?</h4>
+                    <ol type="a">
+                        <li>24</li>
+                        <li>28</li>
+                        <li>30</li>
+                        <li>32</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>If a car travels 150 miles in 3 hours, how many miles will it travel in 5 hours at the same speed?</h4>
+                    <ol type="a">
+                        <li>250</li>
+                        <li>300</li>
+                        <li>350</li>
+                        <li>400</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the square root of 144?</h4>
+                    <ol type="a">
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>If a shopkeeper sells a shirt for $25 and makes a profit of 25%, how much did the shirt originally cost him?</h4>
+                    <ol type="a">
+                        <li>$15</li>
+                        <li>$18</li>
+                        <li>$20</li>
+                        <li>$22</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>A train is traveling at a speed of 70 mph. How long will it take to cover a distance of 210 miles?</h4>
+                    <ol type="a">
+                        <li>2 hours</li>
+                        <li>3 hours</li>
+                        <li>4 hours</li>
+                        <li>5 hours</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>If 6 workers can build 18 houses in 6 months, how many houses can 12 workers build in 4 months?</h4>
+                    <ol type="a">
+                        <li>18</li>
+                        <li>24</li>
+                        <li>30</li>
+                        <li>36</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the perimeter of a rectangle with length 8 cm and width 6 cm?</h4>
+                    <ol type="a">
+                        <li>20 cm</li>
+                        <li>28 cm</li>
+                        <li>32 cm</li>
+                        <li>40 cm</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is 20% of 250?</h4>
+                    <ol type="a">
+                        <li>40</li>
+                        <li>45</li>
+                        <li>50</li>
+                        <li>55</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>If a printer can print 40 pages per minute, how many pages can it print in 2 hours?</h4>
+                    <ol type="a">
+                        <li>2400</li>
+                        <li>3000</li>
+                        <li>3600</li>
+                        <li>4800</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the next number in the sequence: 1, 4, 9, 16, ...?</h4>
+                    <ol type="a">
+                        <li>20</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>32</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>If the radius of a circle is 5 cm, what is its circumference?</h4>
+                    <ol type="a">
+                        <li>10π cm</li>
+                        <li>15π cm</li>
+                        <li>20π cm</li>
+                        <li>25π cm</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>A car travels 200 miles in 4 hours. What is its average speed?</h4>
+                    <ol type="a">
+                        <li>40 mph</li>
+                        <li>50 mph</li>
+                        <li>60 mph</li>
+                        <li>70 mph</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>If a printer prints 5 pages in 2 seconds, how many pages will it print in 1 minute?</h4>
+                    <ol type="a">
+                        <li>150</li>
+                        <li>200</li>
+                        <li>250</li>
+                        <li>300</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the next number in the sequence: 2, 5, 10, 17, ...?</h4>
+                    <ol type="a">
+                        <li>24</li>
+                        <li>26</li>
+                        <li>28</li>
+                        <li>30</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the value of x in the equation: 2x - 5 = 13?</h4>
+                    <ol type="a">
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>If 15% of a number is 45, what is the number?</h4>
+                    <ol type="a">
+                        <li>200</li>
+                        <li>250</li>
+                        <li>300</li>
+                        <li>350</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the area of a triangle with base 6 cm and height 8 cm?</h4>
+                    <ol type="a">
+                        <li>24 cm<sup>2</sup></li>
+                        <li>32 cm<sup>2</sup></li>
+                        <li>36 cm<sup>2</sup></li>
+                        <li>48 cm<sup>2</sup></li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>If a car travels 150 miles in 3 hours, how many miles will it travel in 5 hours at the same speed?</h4>
+                    <ol type="a">
+                        <li>250</li>
+                        <li>300</li>
+                        <li>350</li>
+                        <li>400</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the square root of 144?</h4>
+                    <ol type="a">
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                    </ol>
+                </li>
+            </ol>
+            <button type="submit" class="btn btn-primary">Submit Exam</button>
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>

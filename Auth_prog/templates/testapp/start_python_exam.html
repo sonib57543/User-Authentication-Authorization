@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Exam</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        ol ol {
+            list-style-type: lower-alpha;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'testapp/base.html' %}
+    {% block body_block %}
+    <div class="container">
+        <h2>Python Exam</h2>
+        <p>Welcome to the Python exam. Please read the instructions carefully before starting the exam.</p>
+        <p>Duration: 90 minutes</p>
+        <p>Total Questions: 20</p>
+        <p>Passing Score: 70%</p>
+        <form action="submit_exam.html" method="post">
+            <ol>
+                <li>
+                    <h4>What is the output of the following code?</h4>
+                    <pre>
+                        x = 5 * 4 % 3
+                        print(x)
+                    </pre>
+                    <ol type="a">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Which of the following is NOT a primitive data type in Python?</h4>
+                    <ol type="a">
+                        <li>int</li>
+                        <li>float</li>
+                        <li>string</li>
+                        <li>char</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the result of the expression: <code>3 + 4 * 2 - 5</code>?</h4>
+                    <ol type="a">
+                        <li>6</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the correct way to declare a list in Python?</h4>
+                    <ol type="a">
+                        <li><code>list = [1, 2, 3]</code></li>
+                        <li><code>list = (1, 2, 3)</code></li>
+                        <li><code>list = {1, 2, 3}</code></li>
+                        <li><code>list = {1: 'a', 2: 'b', 3: 'c'}</code></li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Which of the following is used to comment a single line in Python?</h4>
+                    <ol type="a">
+                        <li><code>//</code></li>
+                        <li><code>/* */</code></li>
+                        <li><code>#</code></li>
+                        <li><code>%%</code></li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the output of <code>print("Hello " + 3)</code> in Python?</h4>
+                    <ol type="a">
+                        <li>Error</li>
+                        <li>Hello 3</li>
+                        <li>Hello</li>
+                        <li>3</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Which of the following is true about Python dictionaries?</h4>
+                    <ol type="a">
+                        <li>They are ordered collections of items.</li>
+                        <li>They can contain duplicate elements.</li>
+                        <li>They are mutable.</li>
+                        <li>They cannot be nested.</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the output of the following code?</h4>
+                    <pre>
+                        def func(x=1, y=2):
+                            return x + y
+
+                        print(func(3, 4))
+                    </pre>
+                    <ol type="a">
+                        <li>3</li>
+                        <li>4</li>
+                        <li>7</li>
+                        <li>9</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Which of the following is NOT a valid Python data type?</h4>
+                    <ol type="a">
+                        <li>list</li>
+                        <li>tuple</li>
+                        <li>array</li>
+                        <li>set</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the correct way to open a file named "example.txt" in Python for writing?</h4>
+                    <ol type="a">
+                        <li><code>file = open("example.txt", "r")</code></li>
+                        <li><code>file = open("example.txt", "w")</code></li>
+                        <li><code>file = open("example.txt", "a")</code></li>
+                        <li><code>file = open("example.txt", "x")</code></li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the output of the following code?</h4>
+                    <pre>
+                        nums = [1, 2, 3, 4, 5]
+                        print(nums[-2])
+                    </pre>
+                    <ol type="a">
+                        <li>4</li>
+                        <li>3</li>
+                        <li>2</li>
+                        <li>5</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the purpose of the <code>break</code> statement in Python?</h4>
+                    <ol type="a">
+                        <li>To exit a loop or switch statement.</li>
+                        <li>To skip the current iteration of a loop.</li>
+                        <li>To return a value from a function.</li>
+                        <li>To raise an exception.</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the output of the following code?</h4>
+                    <pre>
+                        x = 10
+                        def func():
+                            x = 5
+                        func()
+                        print(x)
+                    </pre>
+                    <ol type="a">
+                        <li>10</li>
+                        <li>5</li>
+                        <li>Error</li>
+                        <li>None</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Which of the following is true about Python dictionaries?</h4>
+                    <ol type="a">
+                        <li>They are ordered collections of items.</li>
+                        <li>They can contain duplicate elements.</li>
+                        <li>They are mutable.</li>
+                        <li>They cannot be nested.</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the output of the following code?</h4>
+                    <pre>
+                        def func(x=1, y=2):
+                            return x + y
+
+                        print(func(3, 4))
+                    </pre>
+                    <ol type="a">
+                        <li>3</li>
+                        <li>4</li>
+                        <li>7</li>
+                        <li>9</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Which of the following is NOT a valid Python data type?</h4>
+                    <ol type="a">
+                        <li>list</li>
+                        <li>tuple</li>
+                        <li>array</li>
+                        <li>set</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the correct way to open a file named "example.txt" in Python for writing?</h4>
+                    <ol type="a">
+                        <li><code>file = open("example.txt", "r")</code></li>
+                        <li><code>file = open("example.txt", "w")</code></li>
+                        <li><code>file = open("example.txt", "a")</code></li>
+                        <li><code>file = open("example.txt", "x")</code></li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the output of the following code?</h4>
+                    <pre>
+                        nums = [1, 2, 3, 4, 5]
+                        print(nums[-2])
+                    </pre>
+                    <ol type="a">
+                        <li>4</li>
+                        <li>3</li>
+                        <li>2</li>
+                        <li>5</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the purpose of the <code>break</code> statement in Python?</h4>
+                    <ol type="a">
+                        <li>To exit a loop or switch statement.</li>
+                        <li>To skip the current iteration of a loop.</li>
+                        <li>To return a value from a function.</li>
+                        <li>To raise an exception.</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the output of the following code?</h4>
+                    <pre>
+                        x = 10
+                        def func():
+                            x = 5
+                        func()
+                        print(x)
+                    </pre>
+                    <ol type="a">
+                        <li>10</li>
+                        <li>5</li>
+                        <li>Error</li>
+                        <li>None</li>
+                    </ol>
+                </li>
+            </ol>
+            <button type="submit" class="btn btn-primary">Submit Exam</button>
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>

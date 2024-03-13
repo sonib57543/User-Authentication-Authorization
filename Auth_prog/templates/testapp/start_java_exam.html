@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Exam</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        ol ol {
+            list-style-type: lower-alpha;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'testapp/base.html' %}
+    {% block body_block %}
+    <div class="container">
+        <h2>Java Exam</h2>
+        <p>Welcome to the Java exam. Please read the instructions carefully before starting the exam.</p>
+        <p>Duration: 90 minutes</p>
+        <p>Total Questions: 22</p>
+        <p>Passing Score: 70%</p>
+        <form action="submit_exam.html" method="post">
+            <ol>
+                <li>
+                    <h4>What is the output of the following code?</h4>
+                    <pre>
+                        public class Main {
+                            public static void main(String[] args) {
+                                int x = 5 * 4 % 3;
+                                System.out.println(x);
+                            }
+                        }
+                    </pre>
+                    <ol type="a">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Which of the following is NOT a primitive data type in Java?</h4>
+                    <ol type="a">
+                        <li>int</li>
+                        <li>float</li>
+                        <li>string</li>
+                        <li>char</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the result of the expression: <code>3 + 4 * 2 - 5</code>?</h4>
+                    <ol type="a">
+                        <li>6</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Which of the following statements is correct about Java packages?</h4>
+                    <ol type="a">
+                        <li>A package can contain other packages.</li>
+                        <li>A package cannot contain other packages.</li>
+                        <li>All classes in a file must be part of the same package.</li>
+                        <li>Package names must be unique within a project.</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the correct way to declare an array in Java?</h4>
+                    <ol type="a">
+                        <li>int[] numbers;</li>
+                        <li>numbers[] int;</li>
+                        <li>int numbers();</li>
+                        <li>array numbers[];</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Which of the following is used to prevent method overriding in Java?</h4>
+                    <ol type="a">
+                        <li>final</li>
+                        <li>abstract</li>
+                        <li>static</li>
+                        <li>private</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the output of the following code?</h4>
+                    <pre>
+                        public class Test {
+                            public static void main(String[] args) {
+                                String s1 = "hello";
+                                String s2 = "world";
+                                String s3 = s1.concat(s2);
+                                System.out.println(s3);
+                            }
+                        }
+                    </pre>
+                    <ol type="a">
+                        <li>"helloworld"</li>
+                        <li>"hello world"</li>
+                        <li>"hello"</li>
+                        <li>"world"</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Which of the following statements is true about Java interfaces?</h4>
+                    <ol type="a">
+                        <li>An interface can have constructors.</li>
+                        <li>Classes can implement multiple interfaces in Java.</li>
+                        <li>An interface can contain non-abstract methods.</li>
+                        <li>Interface methods cannot be overridden in subclasses.</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the correct way to create a thread in Java?</h4>
+                    <ol type="a">
+                        <li>Define a class that extends the <code>Thread</code> class.</li>
+                        <li>Define a class that implements the <code>Runnable</code> interface.</li>
+                        <li>Both of the above.</li>
+                        <li>None of the above.</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the output of the following code?</h4>
+                    <pre>
+                        public class Test {
+                            public static void main(String[] args) {
+                                int x = 5;
+                                System.out.println(x++); // Post-increment
+                                System.out.println(++x); // Pre-increment
+                            }
+                        }
+                    </pre>
+                    <ol type="a">
+                        <li>5, 7</li>
+                        <li>6, 6</li>
+                        <li>6, 7</li>
+                        <li>7, 7</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Which of the following is true about Java exceptions?</h4>
+                    <ol type="a">
+                        <li>All exceptions in Java are checked exceptions.</li>
+                        <li>Unchecked exceptions must be caught or declared.</li>
+                        <li>Checked exceptions do not need to be caught or declared.</li>
+                        <li>Java does not support exception handling.</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What does the <code>static</code> keyword mean in Java?</h4>
+                    <ol type="a">
+                        <li>The variable or method belongs to the class, not the instance.</li>
+                        <li>The variable or method belongs to the instance, not the class.</li>
+                        <li>The variable or method can be accessed only within the same package.</li>
+                        <li>The variable or method cannot be modified.</li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the correct syntax to define a constructor in Java?</h4>
+                    <ol type="a">
+                        <li><code>constructor ClassName() {}</code></li>
+                        <li><code>void ClassName() {}</code></li>
+                        <li><code>public ClassName() {}</code></li>
+                        <li><code>ClassName() {}</code></li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>What is the output of the following code?</h4>
+                    <pre>
+                        public class Test {
+                            public static void main(String[] args) {
+                                String str = "hello";
+                                str.toUpperCase();
+                            </pre>
+                            <ol type="a">
+                                <li>"hello"</li>
+                                <li>"HELLO"</li>
+                                <li>"Hello"</li>
+                                <li>This code will cause a compilation error.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <h4>Which of the following is true about method overloading in Java?</h4>
+                            <ol type="a">
+                                <li>It allows a method to have multiple return types.</li>
+                                <li>It allows a method to have multiple signatures.</li>
+                                <li>It allows a method to have multiple access modifiers.</li>
+                                <li>It allows a method to have multiple implementations.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <h4>What is the output of the following code?</h4>
+                            <pre>
+                                public class Test {
+                                    public static void main(String[] args) {
+                                        int x = 5;
+                                        int y = 2;
+                                        System.out.println(x / y);
+                                    }
+                                }
+                            </pre>
+                            <ol type="a">
+                                <li>2.5</li>
+                                <li>2</li>
+                                <li>2.0</li>
+                                <li>This code will cause a runtime error.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <h4>Which of the following is a valid identifier in Java?</h4>
+                            <ol type="a">
+                                <li>123var</li>
+                                <li>_var</li>
+                                <li>$var</li>
+                                <li>var-abc</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <h4>What is the purpose of the <code>break</code> statement in Java?</h4>
+                            <ol type="a">
+                                <li>To exit a loop or switch statement.</li>
+                                <li>To skip the current iteration of a loop.</li>
+                                <li>To return a value from a method.</li>
+                                <li>To throw an exception.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <h4>What is the output of the following code?</h4>
+                            <pre>
+                                public class Test {
+                                    public static void main(String[] args) {
+                                        String str = "hello";
+                                        System.out.println(str.substring(1, 3));
+                                    }
+                                }
+                            </pre>
+                            <ol type="a">
+                                <li>"he"</li>
+                                <li>"el"</li>
+                                <li>"lo"</li>
+                                <li>"ell"</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <h4>Which of the following is NOT a valid Java keyword?</h4>
+                            <ol type="a">
+                                <li>class</li>
+                                <li>interface</li>
+                                <li>struct</li>
+                                <li>enum</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <h4>What is the correct way to declare a constant in Java?</h4>
+                            <ol type="a">
+                                <li>Using the <code>const</code> keyword.</li>
+                                <li>Using the <code>final</code> keyword.</li>
+                                <li>Using the <code>static</code> keyword.</li>
+                                <li>Constants cannot be declared in Java.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <h4>What is the output of the following code?</h4>
+                            <pre>
+                                public class Test {
+                                    public static void main(String[] args) {
+                                        String s1 = "hello";
+                                        String s2 = "world";
+                                        String s3 = s1.concat(s2);
+                                        System.out.println(s3);
+                                    }
+                                }
+                            </pre>
+                            <ol type="a">
+                                <li>"helloworld"</li>
+                                <li>"hello world"</li>
+                                <li>"hello"</li>
+                                <li>"world"</li>
+                            </ol>
+                        </li>
+            </ol>
+            <button type="submit" class="btn btn-primary">Submit Exam</button>
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>
+        
