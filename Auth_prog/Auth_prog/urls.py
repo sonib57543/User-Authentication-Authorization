@@ -28,5 +28,7 @@ urlpatterns = [
     path('startJexam/',views.start_java_exam),
     path('startPexam/',views.start_python_exam),
     path('startAexam/', views.start_aptitude_exam),
+    path('logout/', views.logout_view),
+    path('signup/', views.signup_view),
 
 ]
